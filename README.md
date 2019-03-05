@@ -59,12 +59,13 @@ this instruction "1 1 10", the pasture looks like this:
          row 4:  20 20 14 14 20 20
 
 If the final elevation of the lake is to be 22 inches, the pasture
-has these depths:
-                  1  2  3  4  5  6
-         row 1:   4  4  4 -- -- --
-         row 2:   4  4  4  2 -- --
-         row 3:   4  4  4  2  2 --
-         row 4:   2  2  8  8  2  2
+has these depths:                                                                  
+         
+                  1  2  3  4  5  6                                                                                                          
+         row 1:   4  4  4 -- -- --                                                                                                          
+         row 2:   4  4  4  2 -- --                                                                                                          
+         row 3:   4  4  4  2  2 --                                                                                                          
+         row 4:   2  2  8  8  2  2                                                                                                          
 
 for a total aggregated depth of 66. Calculate the volume by multiplying
 by 6 feet x 6 feet = 66 x 72 inches x 72 inches = 342,144 cubic
@@ -106,6 +107,7 @@ OUTPUT FORMAT:
 SAMPLE OUTPUT (file makelake.out):
 
 342144
+
 --------------------------------------------------------------------------------------------------------------------------
 # SILVER Problem 7: Cow Travelling [Aram Shatakhtsyan, 2007]
 
@@ -141,12 +143,12 @@ INPUT FORMAT:
 
 SAMPLE INPUT (file ctravel.in):
 
-4 5 6
-...*.
-...*.
-.....
-.....
-1 3 1 5
+4 5 6                                                                                                                                      
+...*.                                                                                                                                      
+...*.                                                                                                                                      
+.....                                                                                                                                      
+.....                                                                                                                                      
+1 3 1 5                                                                                                                                     
 
 INPUT DETAILS:
 
