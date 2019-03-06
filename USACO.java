@@ -11,17 +11,23 @@ public class USACO{
     int w = s.length() ;
     String line ;
     int[] firstRow ;
-    int[][] stompingDirections ;
     // this first while loop helps me determine
     for (int i = 0 ; s.hasNextLine() ; i++) {
+      line = s.nextLine() ;
+      int[] row = line.split(" ") ;
       if (i == 0) {
-        firstRow = line.split(" ") ;
+        firstRow = row ;
       }
       if (firstRow.length > 0 && i >= firstRow[0] + 1) {
         // we have finished scanning through the field and now we can read the stomping instructions
+        if (i == firstRow[0] + 1) {
+          // we are receiving the first directions and we need to initiate the array holding the directions correctly
+        }
+        else {
 
+          stomp() ;
+        }
       }
-      line = s.nextLine() ;
     }
     field = new int[firstRow[0]][firstRow[1]] ;
     ////////////////////////////////////////////////////
@@ -30,6 +36,9 @@ public class USACO{
 
     }
     return 0 ;
+  }
+  public static void stomp(int row, int col, int change) {
+    
   }
   // Silver level problem
   public static int silver(String filename) throws FileNotFoundException {
