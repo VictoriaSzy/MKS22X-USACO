@@ -38,6 +38,7 @@ public class USACO{
           if (field[m][n] > max) max = field[m][n] ;
         }
       }
+      System.out.println("We found the max to be: " + max) ;
       // stomping happens here --> changing the elevations
     	for (int p = stompingR ; p < stompingR + 3 ; p++) {
     		for (int q = stompingC ; q < stompingC + 3 ; q++) {
@@ -46,6 +47,7 @@ public class USACO{
             int diff = stompingD - max ;
             diff += field[p][q] ;
     				field[p][q] -= diff ;
+            System.out.println("The position of row " + p + "and col " + q + "is now: " + field[p][q]) ;
     			}
     		}
     	}
