@@ -37,6 +37,7 @@ public class USACO {
       	field[r][c] = Integer.parseInt(s.next()) ;
       }
     }
+    //System.out.println(toString(field)) ;
     // finding and doing the stomping directions
     for (int a = 0 ; a < firstRow[3] ; a++) {
     	int stompingR = Integer.parseInt(s.next()) - 1 ;
@@ -49,7 +50,7 @@ public class USACO {
           if (field[m][n] > max) max = field[m][n] ;
         }
       }
-      System.out.println("We found the max to be: " + max) ;
+      //System.out.println("We found the max to be: " + max) ;
       // stomping happens here --> changing the elevations
     	for (int p = stompingR ; p < stompingR + 3 ; p++) {
     		for (int q = stompingC ; q < stompingC + 3 ; q++) {
@@ -58,7 +59,7 @@ public class USACO {
             int diff = stompingD - max ;
             diff += field[p][q] ;
     				field[p][q] -= diff ;
-            System.out.println("The position of row " + p + "and col " + q + "is now: " + field[p][q]) ;
+            //System.out.println("The position of row " + p + "and col " + q + "is now: " + field[p][q]) ;
     			}
     		}
     	}
@@ -70,8 +71,8 @@ public class USACO {
         if (field[ro][co] < firstRow[2]) ans += firstRow[2] - field[ro][co] ;
       }
     }
-    System.out.println("We have gone through all of the for loops and are about to return an answer!") ;
-    System.out.println(ans * 72 * 72) ;
+    //System.out.println("We have gone through all of the for loops and are about to return an answer!") ;
+    //System.out.println(ans * 72 * 72) ;
     return ans * 72 * 72 ;
   }
 
@@ -85,10 +86,12 @@ public class USACO {
     }
     return res ;
   }
+
   // Silver level problem
   public static int silver(String filename) throws FileNotFoundException {
     File f = new File(filename) ;
     Scanner s = new Scanner(f) ;
+
     return 0 ;
   }
 }
