@@ -20,32 +20,45 @@ public class USACO{
     int numRows = firstRow[0] ;
     int numCols = firstRow[1] ;
     int[][] field = new int[numRows][numCols] ;
-    //////////////////////
+    //adding the values to the 2D array
     for (int r = 0 ; r < numRows ; r++) {
       for (int c = 0 ; c < numCols ; c++) {
       	field[r][c] = Integer.parseInt(s.next()) ;
       }
     }
-    ////////////////////
-    /*for (int i = 0 ; s.hasNextLine() ; i++) {
-      line = s.nextLine() ;
-      if (firstRow.length > 0 && i >= firstRow[0] + 1) {
-        // we have finished scanning through the field and now we can read the stomping instructions
-        if (i == firstRow[0] + 1) {
-
-        }
-        else {
+    // finding and doing the stomping directions
+    for (int a = 0 ; a < firstRow[3] ; a++) {
+    	int stompingR = Integer.parseInt(s.next()) - 1 ;
+    	int stompingC = Integer.parseInt(s.next()) - 1 ;
+    	int stompingD = Integer.parseInt(s.next()) ;
+    	int max = 0 ;
+      // finding max elevation
+    	for (int m = stompingR ; m < stompingR + 3 ; m++) {
+        for (int n = stompingC ; n < stompingC + 3 ; n++) {
+          if (field[m][n] > max) max = field[m][n] ;
         }
       }
-    }*/
+      // stomping happens here --> changing the elevations
+    	for (int p = stompingR ; p < stompingR + 3 ; p++) {
+    		for (int q = stompingC ; q < stompingC + 3 ; q++) {
+    			if (max - field[p][q] < stompingD) {
+            // if it's within the interval
+            int diff = stompingD - max ;
+            diff += field[p][q] ;
+    				field[p][q] -= diff ;
+    			}
+    		}
+    	}
+    }
+    ////////////////////
     return 0 ;
   }
 
-  public static String toString(int[][] a) {
+  public static String toString(int[][] ar) {
     String res = "" ;
-    for (int r = 0 ; r < a.length ; r++) {
-      for (int c = 0 ; c < a[0].length ; c++) {
-        res += a[r][c] + " " ;
+    for (int r = 0 ; r < ar.length ; r++) {
+      for (int c = 0 ; c < ar[0].length ; c++) {
+        res += ar[r][c] + " " ;
       }
       res += "\n" ;
     }
