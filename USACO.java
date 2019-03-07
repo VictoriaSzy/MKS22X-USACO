@@ -6,7 +6,11 @@ public class USACO{
   public static int bronze(String filename) throws FileNotFoundException {
     File f = new File(filename) ;
     Scanner s = new Scanner(f) ;
-    int[] firstRow = new int[4] ;
+    while (s.hasNextLine()) {
+      String lin = s.nextLine() ;
+      System.out.println(lin) ;
+    }
+    /*int[] firstRow = new int[4] ;
     for (int i = 0 ; i < 4 ; i++) {
       firstRow[i] = Integer.parseInt(s.next()) ;
     }
@@ -29,7 +33,7 @@ public class USACO{
     while (s.hasNextLine()) {
 
     }
-    return 0 ;
+    return 0 ;*/
   }
 
   public static String toString(int[][] a) {
