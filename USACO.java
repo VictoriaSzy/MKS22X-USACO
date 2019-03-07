@@ -63,8 +63,16 @@ public class USACO {
     		}
     	}
     }
-    ////////////////////
-    return 0 ;
+    // final part: calculating the ans
+    int ans = 0 ;
+    for (int ro = 0 ; ro < numRows ; ro++) {
+      for (int co = 0 ; co < numCols ; co++) {
+        if (field[ro][co] < firstRow[2]) ans += firstRow[2] - field[ro][co] ;
+      }
+    }
+    System.out.println("We have gone through all of the for loops and are about to return an answer!") ;
+    System.out.println(ans * 72 * 72) ;
+    return ans * 72 * 72 ;
   }
 
   public static String toString(int[][] ar) {
