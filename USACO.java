@@ -6,30 +6,39 @@ public class USACO{
   public static int bronze(String filename) throws FileNotFoundException {
     File f = new File(filename) ;
     Scanner s = new Scanner(f) ;
+    /*
+    while (s.hasNextLine()) {
+      String lin = s.nextLine() ;
+      System.out.println(lin) ;
+    }
+    */
     int[] firstRow = new int[4] ;
     for (int i = 0 ; i < 4 ; i++) {
       firstRow[i] = Integer.parseInt(s.next()) ;
     }
     String line ;
-    int[][] field = new int[firstRow[0]][firstRow[1]] ;
-    for (int i = 0 ; s.hasNextLine() ; i++) {
+    int numRows = firstRow[0] ;
+    int numCols = firstRow[1] ;
+    int[][] field = new int[numRows][numCols] ;
+    //////////////////////
+    for (int r = 0 ; r < numRows ; r++) {
+      for (int c = 0 ; c < numCols ; c++) {
+      	field[r][c] = Integer.parseInt(s.next()) ;
+      }
+    }
+    ////////////////////
+    /*for (int i = 0 ; s.hasNextLine() ; i++) {
       line = s.nextLine() ;
       if (firstRow.length > 0 && i >= firstRow[0] + 1) {
         // we have finished scanning through the field and now we can read the stomping instructions
         if (i == firstRow[0] + 1) {
-          // we are receiving the first directions and we need to initiate the array holding the directions correctly
+
         }
         else {
         }
       }
     }
-    field = new int[firstRow[0]][firstRow[1]] ;
-    ////////////////////////////////////////////////////
-    Scanner ss = new Scanner(f) ;
-    while (s.hasNextLine()) {
-
-    }
-    return 0 ;
+    return 0 ;*/
   }
 
   public static String toString(int[][] a) {
