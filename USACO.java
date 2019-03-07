@@ -1,7 +1,18 @@
 import java.util.* ;
 import java.io.* ;
 
-public class USACO{
+public class USACO {
+  public static void main(String[] args) {
+    System.out.println("**********************BRONZE**********************") ;
+    System.out.println("We are now testing to see how the bronze problem is going!") ;
+    try {
+      bronze("testCases/makelake.1.in") ;
+    } catch (FileNotFoundException e) {
+      System.out.println("We couldn't find the file! UH OH") ;
+    } catch (Exception e) {
+      System.out.println("There's an exception being thrown but it's not caused by a missing file!") ;
+    }
+  }
   // Bronze level problem
   public static int bronze(String filename) throws FileNotFoundException {
     File f = new File(filename) ;
