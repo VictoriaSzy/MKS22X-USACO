@@ -121,13 +121,15 @@ public class USACO {
     if (time < 0 || time > 15) {
       throw new IllegalArgumentException("The time is greater than 15 seconds or less than 0, making it invalid!") ;
     }
+    s.nextLine() ;
     int[][] field = new int[numRows][numCols] ;
-    String line ;
-    for (int r = 0 ; r < numRows ; r++) {
+    for (int r = 0; r < numRows ; r++) {
+      String line = s.nextLine() ;
       for (int c = 0 ; c < numCols ; c++) {
-        line = s.nextLine() ;
-        if (line.charAt(c) == '.') field[r][c] = 0 ;
         if (line.charAt(c) == '*') field[r][c] = -1 ;
+        else {
+          field[r][c] = 0 ;
+        }
       }
     }
     int[] lastRow = new int[4] ;
