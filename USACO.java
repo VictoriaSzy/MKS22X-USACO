@@ -35,10 +35,10 @@ public class USACO {
     for (int i = 0 ; i < 4 ; i++) {
       firstRow[i] = Integer.parseInt(s.next()) ;
     }
-    String line ;
     int numRows = firstRow[0] ;
     int numCols = firstRow[1] ;
     int[][] field = new int[numRows][numCols] ;
+    String line ;
     //adding the values to the 2D array
     for (int r = 0 ; r < numRows ; r++) {
       for (int c = 0 ; c < numCols ; c++) {
@@ -104,6 +104,24 @@ public class USACO {
     for (int i = 0 ; i < 3 ; i++) {
       firstRow[i] = Integer.parseInt(s.next()) ;
     }
+    int numRows = firstRow[0] ;
+    int numCols = firstRow[1] ;
+    int time = firstRow[2] ;
+    int[][] field = new int[numRows][numCols] ;
+    String line ;
+    for (int r = 0 ; r < numRows ; r++) {
+      for (int c = 0 ; c < numCols ; c++) {
+      	field[r][c] = Integer.parseInt(s.next()) ;
+      }
+    }
+    int[] lastRow = new int[4] ;
+    for (int a = 0 ; a < 4 ; a++) {
+      lastRow[a] = Integer.parseInt(s.next()) ;
+    }
+    int startingRow = lastRow[0] ;
+    int startingCol = lastRow[1] ;
+    int finalRow = lastRow[2] ;
+    int finalCol = lastRow[3] ;
     return 0 ;
   }
 }
