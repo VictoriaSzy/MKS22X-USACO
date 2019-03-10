@@ -6,12 +6,19 @@ public class USACO {
     System.out.println("**********************BRONZE**********************") ;
     System.out.println("We are now testing to see how the bronze problem is going!") ;
     try {
-      bronze("testCases/makelake.1.in") ;
+      if (args.length == 0) {
+        System.out.println(bronze("testCases/makelake.1.in")) ;
+      }
+      else {
+        bronze(args[0]) ;
+      }
     } catch (FileNotFoundException e) {
       System.out.println("We couldn't find the file! UH OH") ;
     } catch (Exception e) {
       System.out.println("There's an exception being thrown but it's not caused by a missing file!") ;
     }
+    System.out.println("**********************SILVER**********************") ;
+    System.out.println("We are now testing to see how the silver problem is going!") ;
   }
   // Bronze level problem
   public static int bronze(String filename) throws FileNotFoundException {
@@ -23,6 +30,7 @@ public class USACO {
       System.out.println(lin) ;
     }
     */
+    // read through first row to find out basic info
     int[] firstRow = new int[4] ;
     for (int i = 0 ; i < 4 ; i++) {
       firstRow[i] = Integer.parseInt(s.next()) ;
@@ -91,7 +99,11 @@ public class USACO {
   public static int silver(String filename) throws FileNotFoundException {
     File f = new File(filename) ;
     Scanner s = new Scanner(f) ;
-
+    // read through first row to find out basic info (only 3 compared to bronze problem)
+    int[] firstRow = new int[3] ;
+    for (int i = 0 ; i < 3 ; i++) {
+      firstRow[i] = Integer.parseInt(s.next()) ;
+    }
     return 0 ;
   }
 }
